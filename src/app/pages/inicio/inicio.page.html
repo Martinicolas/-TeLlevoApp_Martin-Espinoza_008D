@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline" color="primary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+
+    <ion-title size="large">Inicio</ion-title>
+  </ion-header>
+  <ion-content class="ion-content">
+    <!-- <div class="entrada">
+      <img class="imagen-duoc" src="assets/Bienvenidos.png">
+    </div> -->
+    <div class="centered-card-content">
+      <h3>Bienvenido</h3>
+    </div>
+    <ion-card>
+      <ion-card-header class="ion-padding" style="background-color:#31C3EE;">
+        <ion-card-title class="ion-text-center">Viaja de manera segura con
+          <br>
+          Te Llevo App
+        </ion-card-title>
+      </ion-card-header>
+      <div class="ion-padding" style="background-color:#31C3EE;">
+        <!-- <ion-card-content class="centered-card-content">
+          <img src="assets/logo1.png" alt="" class="imagen-duoc">
+        </ion-card-content> -->
+      </div>
+    </ion-card>
+
+    <ion-card>
+      <br>
+      <div class="ion-text-center ">
+        <ion-label>¿Quieres iniciar sesion? <br></ion-label>
+        <ion-text class="color-text" (click)="redirigirAPagina()">Iniciar Sesion</ion-text>
+        <br>
+        <br> <ion-label>¿No tienes cuenta?</ion-label> <br>
+        <ion-text class="color-text" (click)="redirigirAPaginar()">Registrate</ion-text>
+      </div>
+      <img src="assets/logo1.png" alt="">
+    </ion-card>
+
+
+
+  </ion-content>

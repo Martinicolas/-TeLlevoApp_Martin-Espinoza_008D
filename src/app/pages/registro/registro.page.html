@@ -1,0 +1,38 @@
+<ion-content>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="" text="back" color="primary"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <app-auth-layout title="¡Registrate!" footerText="¿Ya tienes una cuenta?" linkFooterText="Ingresa aquí"
+    destiny="login">
+    <ion-list mode="md">
+      <form>
+        <ion-item>
+          <ion-input label="Nombre completo" labelPlacement="floating" placeholder="Jose Perez..."
+            type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input label="Correo electronico" labelPlacement="floating" placeholder="Jose123@duoc.cl"
+            type="email"></ion-input>
+        </ion-item>
+      </form>
+      <ion-item>
+        <ion-input label="Contraseña" labelPlacement="floating" placeholder="******" type="password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Repetir contraseña" labelPlacement="floating" placeholder="******"
+          type="password"></ion-input>
+      </ion-item>
+
+      <ion-row>
+        <ion-col>
+          <ion-button class="ion-margin-bottom ion-margin-top" expand="block" shape="round" color="primary"
+            type="submit">
+            Registrarse
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-list>
+  </app-auth-layout>
+</ion-content>

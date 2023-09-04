@@ -1,0 +1,30 @@
+<ion-content>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="" text="back" color="primary"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <app-auth-layout title="Bienvenido" footerText="¿No tienes una cuenta?" linkFooterText="Créala aquí"
+    destiny="registro">
+    <ion-list mode="md">
+      <form>
+        <ion-item>
+          <ion-input label="Correo electronico" labelPlacement="floating" placeholder="Jhon@doe.cl"
+            type="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input label="Contraseña" labelPlacement="floating" placeholder="******" type="password"></ion-input>
+        </ion-item>
+
+        <ion-row>
+          <ion-col>
+            <ion-button class="ion-margin-bottom ion-margin-top" expand="block" shape="round" color="primary"
+              type="submit">
+              Ingresar
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </form>
+    </ion-list>
+  </app-auth-layout>
+</ion-content>

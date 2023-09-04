@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline" color="primary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button color="primary"></ion-menu-button>
+      </ion-buttons>
+      <ion-title color="primary">Nosotros</ion-title>
+      <ion-icon slot="end" name="car-outline"></ion-icon>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-content">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Te Llevo App</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>
+          Bienvenido a Te Llevo App, una emocionante iniciativa que tiene como objetivo facilitar el transporte de
+          estudiantes universitarios de una manera cómoda, segura y confiable. Nuestra misión es brindar una solución de
+          movilidad que conecte a estudiantes que desean compartir viajes hacia la universidad y hacer que el viaje sea
+          más asequible y amigable con el medio ambiente.
+        </p>
+        <p>
+          En Te Llevo App, entendemos la importancia de llegar a tiempo a la universidad y cómo puede ser costoso o
+          incómodo depender del transporte público o de conducir solo. Nuestra plataforma permite a los estudiantes
+          encontrar compañeros de viaje que compartan rutas similares y compartir los gastos de viaje de una manera
+          justa.
+        </p>
+      </ion-card-content>
+      <ion-card>
+        <img src="assets/partida.png" alt="">
+      </ion-card>
+    </ion-card>
+  </ion-content>
