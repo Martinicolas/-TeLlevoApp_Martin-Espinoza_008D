@@ -8,12 +8,24 @@
     </ion-header>
     <ion-content>
       <ion-list>
-        <ion-menu-toggle *ngFor="let c of componentes">
-          <ion-item [routerLink]="c.redirecTo" detail="true">
-            <ion-icon slot="start" [name]="c.icon" color="primary"></ion-icon>
-            {{c.name}}
-          </ion-item>
-        </ion-menu-toggle>
+        <div *ngIf="user">
+          <ion-menu-toggle *ngFor="let c of componenteLogged">
+            <ion-item [routerLink]="c.redirecTo" detail="true">
+              <ion-icon slot="start" [name]="c.icon" color="primary"></ion-icon>
+              {{c.name}}
+            </ion-item>
+          </ion-menu-toggle>
+        </div>
+
+        <div *ngIf="!user">
+
+          <ion-menu-toggle *ngFor="let c of componentes">
+            <ion-item [routerLink]="c.redirecTo" detail="true">
+              <ion-icon slot="start" [name]="c.icon" color="primary"></ion-icon>
+              {{c.name}}
+            </ion-item>
+          </ion-menu-toggle>
+        </div>
       </ion-list>
 
     </ion-content>

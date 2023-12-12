@@ -1,6 +1,59 @@
 <ion-content>
   <ion-toolbar>
     <ion-buttons slot="start">
+      <ion-back-button defaultHref="inicio" text="back" color="primary"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <app-auth-layout title="Bienvenido" footerText="¿No tienes una cuenta?" linkFooterText="Créala aquí"
+    destiny="registro">
+    <ion-list mode="md">
+      <form [formGroup]="loginForm">
+        <ion-item>
+          <ion-input label=" Nombre de usuario" labelPlacement="floating" placeholder="Zampedri" type="text"
+            formControlName="username"></ion-input>
+        </ion-item>
+
+        <div *ngIf="loginForm.get('username')?.invalid && (loginForm.get('username')?.dirty || 
+        loginForm.get('username')?.touched)">
+          <div style="color:red" *ngIf="loginForm.get('username')?.hasError('required')">
+            *Username es obligatorio
+          </div>
+          <div style="color:red" *ngIf="loginForm.get('username')?.hasError('minlength')">
+            *Username debe tener mínimo 4 caracteres
+          </div>
+        </div>
+
+        <ion-item>
+          <ion-input label="Contraseña" labelPlacement="floating" placeholder="******" type="password"
+            formControlName="password"></ion-input>
+        </ion-item>
+
+        <div *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || 
+        loginForm.get('password')?.touched)">
+          <div style="color:red" *ngIf="loginForm.get('password')?.hasError('required')">
+            *Password es obligatoria
+          </div>
+          <div style="color:red" *ngIf="loginForm.get('password')?.hasError('minlength')">
+            *Password debe tener mínimo 4 caracteres
+          </div>
+        </div>
+
+        <ion-row>
+          <ion-col>
+            <ion-button (click)="login()" [disabled]="!loginForm.valid" lass="ion-margin-bottom ion-margin-top"
+              expand="block" shape="round" color="primary" type="submit">
+              Iniciar
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </form>
+    </ion-list>
+  </app-auth-layout>
+</ion-content>
+
+<!-- <ion-content>
+  <ion-toolbar>
+    <ion-buttons slot="start">
       <ion-back-button defaultHref="" text="back" color="primary"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
@@ -27,4 +80,4 @@
       </form>
     </ion-list>
   </app-auth-layout>
-</ion-content>
+</ion-content> -->

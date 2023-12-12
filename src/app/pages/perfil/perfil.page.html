@@ -1,0 +1,62 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Información del Usuario</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list lines="full">
+        <ion-item>
+          <ion-icon name="person-circle" slot="start"></ion-icon>
+          <ion-label>Nombre</ion-label>
+          <ion-note slot="end">{{ nombre }}</ion-note>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="person-circle" slot="start"></ion-icon>
+          <ion-label>Apellido</ion-label>
+          <ion-note slot="end">{{ apellido }}</ion-note>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="mail" slot="start"></ion-icon>
+          <ion-label>Correo</ion-label>
+          <ion-note slot="end">{{ correo }}</ion-note>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="business" slot="start"></ion-icon>
+          <ion-label>Sede</ion-label>
+          <ion-note slot="end">{{ sede }}</ion-note>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Información de tus viajes</ion-card-title>
+    </ion-card-header>
+    <ion-item>
+      <ion-label>Sin informacion de viajes.</ion-label>
+    </ion-item>
+  </ion-card>
+
+  <div class="floating-button">
+    <ion-button expand="block" color="warning" (click)="edit()">
+      Editar informacion
+    </ion-button>
+    <ion-button expand="block" color="danger" (click)="confirmLogout()">
+      Cerrar Sesión
+    </ion-button>
+  </div>
+</ion-content>

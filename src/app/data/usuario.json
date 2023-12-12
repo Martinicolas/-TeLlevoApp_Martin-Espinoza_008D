@@ -1,0 +1,75 @@
+{
+  "usuario": [
+    {
+      "nombre": "Martin",
+      "apellido": "Espinoza",
+      "correo": "martin@espinozah.cl",
+      "password": "1234",
+      "isactive": true,
+      "id": 1
+    },
+    {
+      "nombre": "sadasd",
+      "apellido": "asdsad",
+      "correo": "sadsad",
+      "password": "",
+      "sede": "Melipilla",
+      "isactive": true,
+      "id": 2
+    },
+    {
+      "nombre": "Moliendo",
+      "apellido": "Moli",
+      "correo": "adflsfdfkj",
+      "password": "",
+      "sede": "Plaza Norte",
+      "isactive": true,
+      "id": 3
+    },
+    {
+      "nombre": "Fran",
+      "apellido": "Urrutia",
+      "correo": "Fran22@gmail.com",
+      "password": "",
+      "sede": "Melipilla",
+      "isactive": true,
+      "id": 4
+    },
+    {
+      "nombre": "Francisca",
+      "apellido": "Urrutia",
+      "correo": "Fran1234@gmai..com",
+      "password": "",
+      "sede": "Melipilla",
+      "isactive": true,
+      "id": 5
+    },
+    {
+      "nombre": "Claudiaa",
+      "apellido": "Marchetti",
+      "correo": "1234",
+      "password": "",
+      "sede": "Padre Alonso de Ovalle",
+      "isactive": true,
+      "id": 6
+    },
+    {
+      "nombre": "Claudia",
+      "apellido": "Herrera",
+      "correo": "clau123@gmail.com",
+      "password": "1234",
+      "sede": "Plaza Oeste",
+      "isactive": true,
+      "id": 7
+    },
+    {
+      "nombre": "Vivi",
+      "apellido": "Gonzalez",
+      "correo": "vivi13@gmail.com",
+      "password": "1234",
+      "sede": "Plaza Maipú",
+      "isactive": true,
+      "id": 8
+    }
+  ]
+}

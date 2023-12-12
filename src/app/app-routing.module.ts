@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AutorizadoGuard } from './guards/autorizado.guard';
 
 const routes: Routes = [
   {
@@ -21,7 +22,16 @@ const routes: Routes = [
   },
   {
     path: 'nosotros',
-    loadChildren: () => import('./pages/nosotros/nosotros.module').then(m => m.NosotrosPageModule)
+    loadChildren: () => import('./pages/nosotros/nosotros.module').then(m => m.NosotrosPageModule),
+  },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./pages/perfil/perfil.module').then(m => m.PerfilPageModule),
+    canActivate: [AutorizadoGuard]
+  },
+  {
+    path: 'editar',
+    loadChildren: () => import('./pages/editar/editar.module').then( m => m.EditarPageModule)
   },
 
 

@@ -1,0 +1,43 @@
+.ion-content {
+    --background: #bcefff;
+}
+
+.centered-card-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.registro {
+    width: 90%;
+    transform: translateY(5%);
+    margin: auto;
+}
+
+.color-text {
+    color: cornflowerblue;
+}
+
+.guion-separador {
+    height: 1px;
+    background-color: #000;
+    /* Color negro */
+    margin: 20px 0;
+    /* Espaciado arriba y abajo de la línea */
+}
+
+.guion-separador {
+    height: 1px;
+    background-color: #000;
+    /* Color negro */
+    margin: 20px 0;
+    /* Espaciado arriba y abajo de la línea */
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}

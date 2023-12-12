@@ -9,28 +9,43 @@
     <ion-list mode="md">
       <form>
         <ion-item>
-          <ion-input label="Nombre completo" labelPlacement="floating" placeholder="Jose Perez..."
-            type="text"></ion-input>
+          <ion-input label="Nombre" labelPlacement="floating" placeholder="Jose..." type="text"
+            [(ngModel)]="newRegistro.nombre" required name="txtNombre"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input label="Correo electronico" labelPlacement="floating" placeholder="Jose123@duoc.cl"
-            type="email"></ion-input>
+          <ion-input label="Apellido" labelPlacement="floating" placeholder="Perez..." type="text" name="txtApellido"
+            [(ngModel)]="newRegistro.apellido" required></ion-input>
         </ion-item>
       </form>
       <ion-item>
-        <ion-input label="Contraseña" labelPlacement="floating" placeholder="******" type="password"></ion-input>
+        <ion-input label="Correo electronico" labelPlacement="floating" placeholder="Jose123@duoc.cl" type="email"
+          name="txtCorreo" [(ngModel)]="newRegistro.correo" required></ion-input>
       </ion-item>
+      <ion-col size="6">
+        <ion-item>
+          <label>Sede:</label>
+          <ion-select [(ngModel)]="newRegistro.sede" multiple="false" name="txtPatente" required="">
+            <ion-select-option value="Plaza Maipú">Plaza Maipú</ion-select-option>
+            <ion-select-option value="Antonio Varas">Antonio Varas</ion-select-option>
+            <ion-select-option value="Alameda">Alameda</ion-select-option>
+            <ion-select-option value="Padre Alonso de Ovalle">Padre Alonso de Ovalle</ion-select-option>
+            <ion-select-option value="Melipilla">Melipilla</ion-select-option>
+            <ion-select-option value="Plaza Norte">Plaza Norte</ion-select-option>
+            <ion-select-option value="Plaza Oeste">Plaza Oeste</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
       <ion-item>
-        <ion-input label="Repetir contraseña" labelPlacement="floating" placeholder="******"
-          type="password"></ion-input>
+        <ion-input label="Contraseña" labelPlacement="floating" placeholder="******" type="password"
+          [(ngModel)]="newRegistro.password" required=""></ion-input>
       </ion-item>
 
       <ion-row>
         <ion-col>
-          <ion-button class="ion-margin-bottom ion-margin-top" expand="block" shape="round" color="primary"
-            type="submit">
+          <ion-button (click)="crearRegistro()" expand="block" color="primary" shape="round">
             Registrarse
           </ion-button>
+
         </ion-col>
       </ion-row>
     </ion-list>

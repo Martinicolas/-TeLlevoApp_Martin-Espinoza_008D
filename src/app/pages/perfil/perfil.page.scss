@@ -1,0 +1,16 @@
+.content {
+    margin-top: 20px;
+}
+
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    /* Distancia desde la parte inferior */
+    left: 50%;
+    /* Centrar horizontalmente */
+    transform: translateX(-50%);
+    /* Ajuste fino para centrar exactamente */
+    width: 70%;
+    /* Ancho del botón */
+
+}
